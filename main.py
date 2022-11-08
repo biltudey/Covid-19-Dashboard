@@ -24,7 +24,7 @@ st.write("---")
 
 def get_data():
     url = 'https://covid.ourworldindata.org/data/owid-covid-data.csv'
-    full = pd.read_csv('owid-covid-data.csv')
+    full = pd.read_csv(url)
     full['date'] = pd.to_datetime(full['date'])
     start_date = '2021-11-08'
     end_date = date.isoformat(date.today())
